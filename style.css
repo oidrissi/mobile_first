@@ -1,0 +1,139 @@
+:root{
+    --clr-primary-300: #fafafa;
+    --clr-primary-400: #de6c1b;
+
+    --clr-neutral-800: #333;
+    --clr-neutral-100: rgb(216, 216, 216);
+
+    --ff-primary: 'Montserrat', sans-serif;
+    --ff-accent: 'Open Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-primary);
+    font-weight: 400;
+    font-size: 1.3125rem;
+    line-height: 1.6;
+
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--ff-accent);
+    font-weight: 900;
+    line-height: 1;
+}
+
+h2,
+h3 {
+    margin-bottom: 1em;
+}
+
+.text-center {
+    text-align: center;
+}
+
+header,
+section {
+    padding: 5rem 0;
+}
+
+@media (min-width: 40em) {
+    header,
+    section {
+        padding: 10rem 0;
+    }
+}
+
+
+.form-group {
+    margin-bottom: 2em;
+    display: block;
+}
+
+.container {
+    margin-inline:auto;
+    width: min(90%, 75rem);
+}
+
+.container--narrow {
+    max-width: 35rem;
+}
+
+.container--right {
+    text-align: center;
+}
+
+.toChange:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    background-color: var(--clr-primary-400);  
+}
+
+.split
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media (min-width: 40em) {
+    .split {
+        flex-direction: row;
+    }
+
+    .split > * {
+        flex-basis:100%;
+        /* margin: 0 1rem; */
+    }
+
+    .split > * + * {
+        margin-left: 2em;
+    }
+}
+
+.resized-img {
+    /* max-width: 100%; */
+    /* display:block; */
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    /* object-position: bottom; */
+}
+
+.bg-light {
+    color: var(--clr-primary-400);
+    background-color: var(--clr-neutral-100);
+}
+.bg-accent {
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-primary-400);
+}
+
+.bg-dark {
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-neutral-800);
+}
+
+
+
